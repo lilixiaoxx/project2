@@ -9,6 +9,8 @@ var flash = require('connect-flash');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var connect = require('connect');
+var methodOverride = require('method-override');
 
 mongoose.connect(/* Put the environment variable containing your mLab connection string here */);
 
@@ -74,6 +76,20 @@ app.use(function(req, res, next) {
   res.locals.user = req.user || null;
   next();
 });
+
+
+//CHNAGE NAME OF DATABASE
+mongoose.connect(process.env.PROJECT2_DATABASE);
+
+
+app.use(methodOverride(function(req, res){
+ if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+   // look in urlencoded POST bodies and delete it
+   var method = req.body._method
+   delete req.body._method
+   return method
+ }
+}));
 
 app.use('/', routes);
 app.use('/users', users);
