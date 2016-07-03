@@ -12,7 +12,8 @@ var LocalStrategy = require('passport-local').Strategy;
 var connect = require('connect');
 var methodOverride = require('method-override');
 
-mongoose.connect(/* Put the environment variable containing your mLab connection string here */);
+mongoose.connect(process.env.PROJECT2_DATABASE);
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -77,9 +78,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
-//CHNAGE NAME OF DATABASE
-mongoose.connect(process.env.PROJECT2_DATABASE);
 
 
 app.use(methodOverride(function(req, res){
