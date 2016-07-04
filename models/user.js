@@ -4,8 +4,15 @@ var bcrypt = require('bcrypt');
 var SALT_WORK_FACTOR = 10;
 
 var userSchema = new mongoose.Schema({
+  first_name: { type: String, required: true },
+  last_name: { type: String, required: true },
+  phone: { type: Number, min: 10, max: 10, required: true }, //having issues with INT
   email: { type: String, required: true, index: { unique: true }},
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  gender: { type: String, required: true },
+  age: { type: Number, min: 1, max: 3, required: true }, // same thing here for Int.
+  skills: { type: String, required: false },
+  tutor: { type: String, required: false } //this will be a checkbox function so need to find out how that will work with it being a string
 });
 
 userSchema.pre('save', function(next) {
