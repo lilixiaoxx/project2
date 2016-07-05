@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var authWall = require('../lib/auth_wall');
-var User = require(‘../models/user’)
-var Session = require('../models/session');
+var User = require('../models/user');
+// var Session = require('../models/session');
 // var Location = require('../models/location');
 // var Skill = require('../models/skill');
 
@@ -17,13 +17,13 @@ var Session = require('../models/session');
 
 // PROFILE is a temporary name, can redirect to '/' if we prefer but we need either :id param or a profile page
 // for each user to go to
-router.get('/new', authWall, function(req, res, next) {
-  var user = req.param.email;
-  User.findOne({user: user}, function(err, user){
-    if (err) console.log(err);
-    res.render('', {user: user})
-    // corresponding user ejs file goes in quotes on line 24
-  })
+router.get('/', authWall, function(req, res, next) {
+  // var user = req.param.email;
+  // User.findOne({user: user}, function(err, user){
+  //   if (err) console.log(err);
+  //   res.render('', {user: user})
+  //   // corresponding user ejs file goes in quotes on line 24
+  // })
    res.send("Welcome back, " + req.user.email);
 });
 
@@ -41,16 +41,16 @@ router.get('/new', function(req, res, next) {
 // EDIT user //
 ///////////////
 
-router.get('/', function(req, res, next){
-  // get edit form
-  //need add :id
-  var id = req.params.id;
-  User.findOne({_id: id }, function(err, user){
-    if (err) console.log(err);
-    res.render('edit', {user: user})
-    //need an edit page
-  })
-});
+// router.get('/', function(req, res, next){
+//   // get edit form
+//   //need add :id
+//   var id = req.params.id;
+//   User.findOne({_id: id }, function(err, user){
+//     if (err) console.log(err);
+//     res.render('edit', {user: user})
+//     //need an edit page
+//   })
+// });
 
 
                       ////////////////////////////
@@ -62,20 +62,20 @@ router.get('/', function(req, res, next){
 // CREATE new User retrieve data  //
 ////////////////////////////////////
 //may need to revert below back to '/'
-router.post('/new', function(req, res, next) {
-  var user = new User({
-     name: req.body.name,
-     email: req.body.email,
-     teacher: req.body.teacher,
-     gender: req.body.gender,
-     age: req.body.age,
-     skills: req.body.skills
-  });
+router.post('/', function(req, res, next) {
+  var user = new User(req.body);
+     // name: req.body.name,
+     // email: req.body.email,
+     // teacher: req.body.teacher,
+     // gender: req.body.gender,
+     // age: req.body.age,
+     // skills: req.body.skills
+  // });
 
   user.save(function(err, user) {
     // Handle save error
     if (err) return next(err);
-    res.redirect('/users/profile');
+    res.redirect('/users/new');
     //unsure if this is the correct redirect
     //made up profile page if we wanted to create this potential ejs file as the main page all users who
     // sign up or login are redirected to ultimately

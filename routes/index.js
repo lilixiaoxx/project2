@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require(‘../models/user’)
+// var User = require(‘../models/user’)
 //var Session = require('../models/session');
 // var Location = require('../models/location');
 // var Skill = require('../models/skill');
