@@ -43,6 +43,14 @@ fieldset {
   margin-top:25px;
   }
 
+/*.gender {
+  display: inline-block;
+}*/
+
+/*.tutor {
+  display: inline-block;
+}*/
+
 .ui-dialog .ui-state-error {
   padding: .3em;
   }
