@@ -14,7 +14,6 @@ var methodOverride = require('method-override');
 
 mongoose.connect(process.env.PROJECT2_DATABASE);
 
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var sessions = require('./routes/sessions');
@@ -77,8 +76,6 @@ app.use(function(req, res, next) {
   res.locals.user = req.user || null;
   next();
 });
-
-
 
 app.use(methodOverride(function(req, res){
  if (req.body && typeof req.body === 'object' && '_method' in req.body) {

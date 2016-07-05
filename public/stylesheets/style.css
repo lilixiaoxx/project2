@@ -1,8 +1,63 @@
 body {
-  padding: 50px;
+  padding-top: 60px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image:url("http://theaustonian.com/uploads/full_photos/fullBelowCopy_LChaseBankView_Pan_1sdp.jpg");
+  background-repeat:no-repeat;
+  background-size:100%;
+  overflow:hidden;
 }
 
 a {
   color: #00B7FF;
 }
+
+h1{
+  font-size:60px;
+  text-align: center;
+  padding-top: 300px;
+  color:white;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+h4{
+  font-size:30px;
+  text-align: center;
+  padding-top: 50px;
+  color:white;
+  font-family: 'Fjalla One', sans-serif;
+
+}
+label, input {
+  display:block;
+}
+
+input.text {
+  margin-bottom:12px;
+  width:95%;
+  padding: .4em;
+}
+
+fieldset {
+  padding:0;
+  border:0;
+  margin-top:25px;
+  }
+
+.ui-dialog .ui-state-error {
+  padding: .3em;
+  }
+
+.validateTips {
+  border: 1px solid transparent;
+  padding: 0.3em;
+  }
+
+@media screen and (max-width: 409px) {
+  h1 { font-size: 20px;
+       padding-top:30px;
+   }
+   h4 { font-size: 10px;
+        padding-top:10px;
+
+   }
+ }
