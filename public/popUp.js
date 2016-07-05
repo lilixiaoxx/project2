@@ -66,7 +66,6 @@ $(function() {
       width: 350,
       modal: true,
       buttons: {
-        "Create an account": addUser,
         Cancel: function() {
           dialog.dialog( "close" );
         }
@@ -77,10 +76,10 @@ $(function() {
       }
     });
 
-    form = dialog.find( "form" ).on( "submit", function( event ) {
-      event.preventDefault();
-      addUser();
-    });
+    // form = dialog.find( "form" ).on( "submit", function( event ) {
+    //   event.preventDefault();
+    //   addUser();
+    // });
 
     $( "#signupPop" ).button().on( "click", function() {
       dialog.dialog( "open" );
@@ -151,7 +150,6 @@ $(function() {
       width: 350,
       modal: true,
       buttons: {
-        "Login Account": loginUser,
         Cancel: function() {
           dialog.dialog( "close" );
         }
@@ -162,10 +160,10 @@ $(function() {
       }
     });
 
-    form = dialog.find( "form" ).on( "submit", function( event ) {
-      event.preventDefault();
-      addUser();
-    });
+    // form = dialog.find( "form" ).on( "submit", function( event ) {
+    //   event.preventDefault();
+    //   addUser();
+    // });
 
     $( "#loginPop" ).button().on( "click", function() {
       dialog.dialog( "open" );

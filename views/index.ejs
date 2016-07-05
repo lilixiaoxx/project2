@@ -32,7 +32,7 @@
 
 	<div id="signup">
 		<p class="validateTips">All form fields are required.</p>
-		<form>
+		<form id="test" method="post" action="/">
 			<fieldset>
 				<label for="first-name">First Name</label>
 				<input type="text" name="first_name" id="name" class="text ui-widget-content ui-corner-all">
@@ -65,7 +65,7 @@
 				</div>
 
 				<!-- Allow form submission with keyboard without duplicating the dialog button -->
-				<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+				<input type="submit" tabindex="-1">
 			</fieldset>
 		</form>
 	</div>
@@ -79,7 +79,7 @@
 				<input type="text" name="email" id="email2" class="text ui-widget-content ui-corner-all">
 				<label for="password">Password</label>
 				<input type="password" name="password" id="password2" class="text ui-widget-content ui-corner-all">
-				<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+				<input type="submit" tabindex="-1">
 			</fieldset>
 		</form>
 	</div>
