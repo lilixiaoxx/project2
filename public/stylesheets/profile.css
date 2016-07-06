@@ -1,7 +1,6 @@
 body {
   padding-top: 60px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image:url("http://theaustonian.com/uploads/full_photos/fullBelowCopy_LChaseBankView_Pan_1sdp.jpg");
   background-repeat:no-repeat;
   background-size:100%;
   overflow:hidden;
@@ -11,23 +10,19 @@ a {
   color: #00B7FF;
 }
 
-#profile_header {
-  margin-top: 60px;
-}
-
 h1{
   font-size:60px;
   text-align: center;
-  padding-top: 300px;
-  color:white;
+  padding-top: 0px;
+  color: black;
   font-family: 'Fjalla One', sans-serif;
 }
 
 h4{
   font-size:30px;
   text-align: center;
-  padding-top: 50px;
-  color:white;
+  padding-top: 0px;
+  color: black;
   font-family: 'Fjalla One', sans-serif;
 
 }
@@ -41,19 +36,20 @@ input.text {
   padding: .4em;
 }
 
+.tests {
+  margin: 50px;
+}
+
+/*.trello {
+  padding: 33%;
+}*/
+
 fieldset {
   padding:0;
   border:0;
   margin-top:25px;
   }
 
-/*.gender {
-  display: inline-block;
-}*/
-
-/*.tutor {
-  display: inline-block;
-}*/
 
 .ui-dialog .ui-state-error {
   padding: .3em;
