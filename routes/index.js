@@ -20,9 +20,17 @@ router.get('/', function(req, res, next) {
 //    res.send("Welcome back, " + req.user.email);
 // });
 
+
 router.get('/profiles', function(req, res, next) {
   console.log(req.user);
   res.render('profile');
+});
+
+router.get('/profiles/tutorslist', function(req, res, next) {
+  User.find({}, function(err, users){
+    if (err) console.log(err);
+    res.render('tutorslist', {users: users});
+  });
 });
 
 router.post('/', function(req, res, next) {
