@@ -14,7 +14,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-
+router.get('/profiles', function(req, res, next) {
+  res.render('profile');
+});
 
 router.post('/', function(req, res, next) {
   var user = new User({
@@ -32,10 +34,7 @@ router.post('/', function(req, res, next) {
   user.save(function(err, user) {
     // Handle save error
     if (err) return next(err);
-    res.redirect('/');
-    //unsure if this is the correct redirect
-    //made up profile page if we wanted to create this potential ejs file as the main page all users who
-    // sign up or login are redirected to ultimately
+    res.redirect('profiles');
   });
 });
 module.exports = router;

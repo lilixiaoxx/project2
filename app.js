@@ -17,6 +17,7 @@ mongoose.connect(process.env.PROJECT2_DATABASE);
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var sessions = require('./routes/sessions');
+var profiles = require('./routes/profiles');
 
 var app = express();
 
@@ -89,6 +90,7 @@ app.use(methodOverride(function(req, res){
 app.use('/', routes);
 app.use('/users', users);
 app.use('/sessions', sessions);
+app.use('/profiles', profiles);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
