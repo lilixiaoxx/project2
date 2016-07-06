@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
+var authWall = require('../lib/auth_wall');
+
 //var Session = require('../models/session');
 // var Location = require('../models/location');
 // var Skill = require('../models/skill');
@@ -14,8 +16,21 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// router.get('/', authWall, function(req, res, next) {
+//    res.send("Welcome back, " + req.user.email);
+// });
+
+
 router.get('/profiles', function(req, res, next) {
+  console.log(req.user);
   res.render('profile');
+});
+
+router.get('/profiles/tutorslist', function(req, res, next) {
+  User.find({}, function(err, users){
+    if (err) console.log(err);
+    res.render('tutorslist', {users: users});
+  });
 });
 
 router.post('/', function(req, res, next) {
