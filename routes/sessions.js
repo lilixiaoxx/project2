@@ -2,15 +2,15 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 
-/* GET home page. */
-router.get('/new', function(req, res, next) {
-  res.render('sessions/new', { message: req.flash('error') });
-});
+// /* GET home page. */
+// router.get('/new', function(req, res, next) {
+//   res.render('sessions/new', { message: req.flash('error') });
+// });
 
 /* POST new session home page. */
 router.post('/', passport.authenticate('local', {
-  successRedirect: '/',
-  failureRedirect: '/sessions/new',
+  successRedirect: '/profiles',
+  failureRedirect: '/',
   failureFlash: true
 }));
 

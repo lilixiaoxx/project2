@@ -1,4 +1,5 @@
 $(function () {
+    $('.ui-link').removeClass('ui-link');
 
     $('.toggle').click(function (event) {
         event.preventDefault();
