@@ -27,7 +27,7 @@ router.get('/profiles', function(req, res, next) {
 });
 
 router.get('/profiles/tutorslist', function(req, res, next) {
-  User.find({}, function(err, users){
+  User.find({tutor:true}, function(err, users){
     if (err) console.log(err);
     res.render('tutorslist', {users: users});
   });
