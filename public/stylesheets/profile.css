@@ -21,7 +21,7 @@ h1{
 h4{
   font-size:30px;
   text-align: center;
-  padding-top: 0px;
+  padding-top: 40px;
   color: black;
   font-family: 'Fjalla One', sans-serif;
 
@@ -40,6 +40,9 @@ input.text {
   margin: 50px;
 }
 
+/*#credits {
+    margin-top: 5%;
+}*/
 /*.trello {
   padding: 33%;
 }*/
@@ -50,6 +53,54 @@ fieldset {
   margin-top:25px;
   }
 
+/*.btn{
+  height:90px;
+  width:240px;
+  margin-left:120px;
+  margin-top: 90px;
+}*/
+#first a:link, a:visited {
+    background-color: #FF8C00;
+    color: white;
+    padding: 30px 55px;
+    margin:90px 0 0 150px;
+    float:left;
+    text-decoration: none;
+    /*display: inline-block;*/
+}
+
+#first a:hover, a:active {
+    background-color: hotpink;
+}
+
+
+#second a:link, a:visited {
+    background-color: blue;
+    color: white;
+    padding: 30px 60px;
+    margin:90px 0 0 200px;
+    float:left;
+    text-decoration: none;
+    /*display: inline;*/
+}
+
+#second a:hover, a:active {
+    background-color:red;
+}
+
+#third a:link, a:visited {
+    background-color: green;
+    color: white;
+    padding: 30px 45px;
+    margin:90px 0 0 200px;
+    float:left;
+    text-decoration: none;
+    /*display: inline;*/
+}
+
+#third a:hover, a:active {
+    background-color: gray;
+}
 
 .ui-dialog .ui-state-error {
   padding: .3em;
@@ -61,10 +112,10 @@ fieldset {
   }
 
 @media screen and (max-width: 409px) {
-  h1 { font-size: 20px;
+  h1 { font-size: 50px;
        padding-top:30px;
    }
-   h4 { font-size: 10px;
+   h4 { font-size: 30px;
         padding-top:10px;
 
    }
