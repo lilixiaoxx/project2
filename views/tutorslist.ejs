@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
-            <li><a href="#">Tutors</a></li>
+            <li><a href="/profiles">Profile</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
 
@@ -45,12 +45,7 @@
   <h1>Hey!</h1>
   <h4>Glad to see you back. Happy Coding!</h4>
   <% users.forEach(function(user) { %>
-    <!--  <div class="user"> -->
-       <!-- <a href="/users/<%= user._id %>"> --><h3><%= user.first_name %></h3>
-       <!-- </a> -->
-       <!-- <p><%= user.catch_phrase %></p> -->
-       <!-- <p>Created On: <%= user.created_at %></p> -->
-    <!--  </div> -->
+       <a href="/profiles"><h3><%= user.first_name + " " + user.last_name %></h3></a>
      <% }) %>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

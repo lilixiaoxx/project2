@@ -22,7 +22,6 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/profiles', function(req, res, next) {
-  console.log(req.user);
   res.render('profile');
 });
 
@@ -49,7 +48,7 @@ router.post('/', function(req, res, next) {
   user.save(function(err, user) {
     // Handle save error
     if (err) return next(err);
-    res.redirect('profiles');
+    res.redirect('/');
   });
 });
 module.exports = router;
