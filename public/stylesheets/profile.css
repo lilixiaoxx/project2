@@ -3,7 +3,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-repeat:no-repeat;
   background-size:100%;
-  overflow:hidden;
+
 }
 
 a {
@@ -40,12 +40,18 @@ input.text {
   margin: 50px;
 }
 
-/*#credits {
-    margin-top: 5%;
-}*/
-/*.trello {
-  padding: 33%;
-}*/
+.leftpart{
+  margin-top:50px;
+  margin-left:100px;
+}
+.leftpartone{
+  width:40%;
+}
+.leftpartone img{
+  width:60%;
+  margin-top:50px;
+
+}
 
 fieldset {
   padding:0;
@@ -53,54 +59,56 @@ fieldset {
   margin-top:25px;
   }
 
-/*.btn{
-  height:90px;
-  width:240px;
-  margin-left:120px;
-  margin-top: 90px;
-}*/
 #first a:link, a:visited {
     background-color: #FF8C00;
     color: white;
-    padding: 30px 55px;
-    margin:90px 0 0 150px;
-    float:left;
+    padding: 30px 100px;
+    margin:0 0 40px 900px;
     text-decoration: none;
-    /*display: inline-block;*/
+    display: inline-block;
 }
 
 #first a:hover, a:active {
     background-color: hotpink;
 }
 
-
 #second a:link, a:visited {
-    background-color: blue;
+    background-color: #FF4500;
     color: white;
-    padding: 30px 60px;
-    margin:90px 0 0 200px;
-    float:left;
+    padding: 30px 100px;
+    margin:0 0 60px 900px;
     text-decoration: none;
-    /*display: inline;*/
+    display: inline-block;
 }
 
 #second a:hover, a:active {
-    background-color:red;
+    background-color: #FF6347;
 }
 
 #third a:link, a:visited {
     background-color: green;
     color: white;
-    padding: 30px 45px;
-    margin:90px 0 0 200px;
-    float:left;
+    padding: 30px 90px;
+    margin:0 0 0 900px;
     text-decoration: none;
-    /*display: inline;*/
+    display: inline;
 }
 
 #third a:hover, a:active {
     background-color: gray;
 }
+
+/*#demo button{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top:-500px;
+}*/
 
 .ui-dialog .ui-state-error {
   padding: .3em;
@@ -111,12 +119,25 @@ fieldset {
   padding: 0.3em;
   }
 
-@media screen and (max-width: 409px) {
-  h1 { font-size: 50px;
-       padding-top:30px;
+@media screen and (max-width: 500px) {
+  .toppart h1 { font-size: 50px;
+       padding-top:40px;
+       padding-left:20px;
    }
-   h4 { font-size: 30px;
+   .toppart h4 { font-size: 30px;
         padding-top:10px;
-
+        padding-left:20px;
    }
+   .leftpart img{
+    width:30%;
+    margin:90px 0 0 50px;
+   }
+   #third a:link, a:visited{
+    margin:90px 0 40px 120px;
+    padding: 20px 50px;
+   }
+   #first a:link, a:visited{
+    margin:90px 0 40px 120px;
+    padding: 20px 60px;
+
  }
