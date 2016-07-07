@@ -22,6 +22,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/profiles', function(req, res, next) {
+  // Review.find({})
   res.render('profile');
 });
 
@@ -51,4 +52,20 @@ router.post('/', function(req, res, next) {
     res.redirect('/');
   });
 });
+
+////// Teacher Review Get & Post ///////
+
+
+router.post('/profiles', function(req, res, next) {
+  var review = req.body;
+  //or
+  var review = new Review({
+    tutor_review: req.body
+  })
+  review.save(function(err, review){
+    if (err) return next(err);
+    res.redirect('profiles');
+  });
+});
+
 module.exports = router;
