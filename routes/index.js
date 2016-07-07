@@ -17,12 +17,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-// router.get('/', authWall, function(req, res, next) {
-//    res.send("Welcome back, " + req.user.email);
-// });
 
-
-router.get('/profiles', function(req, res, next) {
+router.get('/profiles', authWall, function(req, res, next) {
   // Review.find({})
   res.render('profile');
 });
@@ -33,6 +29,20 @@ router.get('/profiles/tutorslist', function(req, res, next) {
     res.render('tutorslist', {users: users});
   });
 });
+
+router.get('/profiles/:id', function(req, res, next) {
+  var id = req.params.id;
+  User.findOne({_id:id}, function(err, tutor){
+    if(err)console.log(err);
+    Recommendation.count({tutor_id: id, isLiked:true}, function(err, numLikes){
+      Recommendation.count({tutor_id: id, isLiked:false}, function(err, numDislikes){
+        res.render('tutor', {tutor: tutor, numLikes: numLikes, numDislikes: numDislikes, errorMessage: req.flash('error')}); //tutor:tutor?????
+      });
+    });
+  })
+});
+
+
 
 router.post('/', function(req, res, next) {
   var user = new User({
@@ -51,6 +61,25 @@ router.post('/', function(req, res, next) {
     // Handle save error
     if (err) return next(err);
     res.redirect('/');
+  });
+});
+
+router.post('/profiles/:id', function(req, res, next){
+  var tutorId = req.params.id;
+  var recommended = new Recommendation ({
+    tutor_id: req.params.id,
+    student_id: req.user._id,
+    isLiked: req.body
+  });
+
+  console.log(req.user);
+  console.log(req.params.id);
+  recommended.save(function(err, recommendation){
+    if(err) {
+      req.flash('error', 'You can only like tutor onnce');
+    }
+
+    res.redirect('/profiles/' + tutorId);
   });
 });
 
