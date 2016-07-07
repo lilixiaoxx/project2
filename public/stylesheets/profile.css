@@ -98,8 +98,8 @@ fieldset {
     background-color: gray;
 }
 
-#demo button{
-    background-color: #008CBA; /* Green */
+/*#demo button{
+    background-color: #008CBA;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -108,7 +108,7 @@ fieldset {
     display: inline-block;
     font-size: 16px;
     margin-top:-500px;
-}
+}*/
 
 .ui-dialog .ui-state-error {
   padding: .3em;
