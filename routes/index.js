@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
+var Recommendation = require('../models/recommendation');
 var authWall = require('../lib/auth_wall');
 
 //var Session = require('../models/session');
@@ -33,14 +34,6 @@ router.get('/profiles/tutorslist', function(req, res, next) {
   });
 });
 
-router.get('/profiles/:id', function(req, res, next) {
-  var id = req.params.id;
-  User.findOne({_id:id}, function(err, tutor){
-    if(err)console.log(err);
-    res.render('tutor', {tutor:tutor});
-  })
-});
-
 router.post('/', function(req, res, next) {
   var user = new User({
      // name: req.body.name,
@@ -64,16 +57,16 @@ router.post('/', function(req, res, next) {
 ////// Teacher Review Get & Post ///////
 
 
-router.post('/profiles', function(req, res, next) {
-  var review = req.body;
-  //or
-  var review = new Review({
-    tutor_review: req.body
-  })
-  review.save(function(err, review){
-    if (err) return next(err);
-    res.redirect('profiles');
-  });
-});
+// router.post('/profiles', function(req, res, next) {
+//   var review = req.body;
+//   //or
+//   var review = new Review({
+//     tutor_review: req.body
+//   })
+//   review.save(function(err, review){
+//     if (err) return next(err);
+//     res.redirect('profiles');
+//   });
+// });
 
 module.exports = router;
