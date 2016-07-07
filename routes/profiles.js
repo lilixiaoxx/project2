@@ -29,7 +29,7 @@ router.get('/:id', function(req, res, next) {
   })
 });
 
-router.post('/:id', function(req, res, next){
+router.post('/:id/likeTutor', function(req, res, next){
   var tutorId = req.params.id;
   var recommended = new Recommendation ({
     tutor_id: req.params.id,
