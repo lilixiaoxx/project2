@@ -33,6 +33,14 @@ router.get('/profiles/tutorslist', function(req, res, next) {
   });
 });
 
+router.get('/profiles/:id', function(req, res, next) {
+  var id = req.params.id;
+  User.findOne({_id:id}, function(err, tutor){
+    if(err)console.log(err);
+    res.render('tutor', {tutor:tutor});
+  })
+});
+
 router.post('/', function(req, res, next) {
   var user = new User({
      // name: req.body.name,
