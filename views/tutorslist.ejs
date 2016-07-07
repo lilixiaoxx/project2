@@ -47,7 +47,7 @@
     <!-- <h1>Hey!</h1> -->
     <h4 class="tutors">Here are our tutors currently available!</h4>
     <% users.forEach(function(user) { %>
-       <a href="/profiles" class="col-md-3 btn btn-info"><h3><%= user.first_name + " " + user.last_name %></h3></a>
+       <a href="/profiles/<%= user._id %>" class="col-md-3 btn btn-info"><h3><%= user.first_name + " " + user.last_name %></h3></a>
      <% }) %>
    </div>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
