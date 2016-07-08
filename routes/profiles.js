@@ -38,7 +38,7 @@ router.post('/:id/likeTutor', function(req, res, next){
   });
   recommended.save(function(err, recommendation){
     if(err) {
-      req.flash('error', 'You can only like tutor onnce');
+      req.flash('error', 'Error...Error...LIKE OVERLOAD! Keep it to one per tutor, please.');
     }
       res.redirect('/profiles/' + tutorId);
   });
