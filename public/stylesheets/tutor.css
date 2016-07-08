@@ -17,6 +17,27 @@ h4{
   font-family: 'Fjalla One', sans-serif;
 }
 
+h3 {
+  text-align: center;
+  width: 200px;
+}
+
+.panel {
+  text-align: center;
+  /*margin-left: 50px;*/
+  padding-bottom: 70px;
+  /*max-width: 400px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  margin-top: 30px;
+  /*font-weight: bolder;*/
+  font-size: 40px;
+  /*border: none;*/
+}
+
 p {
   color: red;
   font-size: 20px;
@@ -28,17 +49,26 @@ p {
   background-color: #2b54f3;
   border: none;
 }*/
+
 input[type="submit"] {
     font-family: FontAwesome;
+    border: none;
+    background-color: inherit;
+    color: #2b54f3;
 }
 
 .leftpartone{
   width:40%;
+  display: block;
 }
 
 .leftpartone img{
-  width:60%;
+  width:80%;
   margin-top:50px;
+}
+
+.infoButtons {
+  text-align: center;
 }
 
 #first a:link, a:visited {
@@ -52,6 +82,11 @@ input[type="submit"] {
 
 #first a:hover, a:active {
     background-color: hotpink;
+}
+
+#credits {
+  /*text-align: center;*/
+  /*list-style: none;*/
 }
 
 #second a:link, a:visited {
