@@ -68,7 +68,12 @@ Unsolved Problems:
 
     Liking and disliking is limited to one per page as intended, but users cannot UNDUE this action.
 
+![alt text](/public/Development_images/initialplanning.jpg "Description goes here")
+![alt text](/public/Development_images/mvp.jpg "Description goes here")
 ![alt text](/public/Development_images/Erd.jpg "Description goes here")
+![alt text](/public/Development_images/wireframe.jpg "Description goes here")
+![alt text](/public/Development_images/bonusfeatures.jpg "Description goes here")
+![alt text](/public/Development_images/finalplanning.jpg "Description goes here")
 
 
 
