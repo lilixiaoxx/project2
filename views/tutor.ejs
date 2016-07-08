@@ -43,83 +43,53 @@
     </nav>
   </div>
 
-<h4 class="">Hello I am <%= tutor.first_name%> and welcome to my profile!</h4>
+<h4>Hello I am <%= tutor.first_name%> and welcome to my profile!</h4>
 
 <div class="panel panel-centered panel-info leftpartone">
-    <img src="http://cdn.stupiddope.com/wp-content/uploads/2013/10/la-et-ct-will-ferrell-ron-burgundy-dodge-ads-2-001.png"/>
-
-
-<div id="recommend">
+  <img src="http://cdn.stupiddope.com/wp-content/uploads/2013/10/la-et-ct-will-ferrell-ron-burgundy-dodge-ads-2-001.png"/>
+    <h2>About Me</h2>
+    <h3>I graduated from General Assembly Austin Web Development Immersive.<br/>Love to teach and help others learn a new skill.</h3><br/>
+    <h2>Recommendations</h2>
+  <div id="recommend">
     <form method="post" action="/profiles/<%= tutor._id %>/likeTutor">
       <input type="submit" class="search" value="&#xf087;" />
-    <!-- <input type="submit" name="like" value="Like"> -->
       <span class="likes"><%= numLikes %></span>
       <input type="submit" class="search" value="&#xf088;" />
-    <!-- <input type="submit" name="like" value="Dislike"> -->
       <span class="dislikes"><%= numDislikes %></span>
     </form>
   </div>
 
-  <% if (errorMessage) { %>
-  <p><span class="blink"><%= errorMessage %></span></p>
-  <% } %>
+      <% if (errorMessage) { %>
+      <p><span class="blink"><%= errorMessage %></span></p>
+      <% } %>
+    <a href="#" class="btn btn-success">Book a Session!</a>
 </div>
 
 <div class="infoButtons">
-<a href="#credits" id="first" class="col-md-offset-5 toggle btn btn-warning btn-lg">My Skills</a>
-<!-- <div id="first">
-  <a href="#credits" class="toggle btn btn-primary"> My Skills </a>
-</div> -->
+      <a href="#credits" id="first" class="col-md-offset-5 toggle btn btn-warning btn-lg">My Skills</a>
+            <div id="credits" class="well hidden">
+              <h2>Front End:</h2>
+              <h3>Git, Github, HTML, CSS, JavaScript, jQuery, Bootstrap, ReactJS</h3><br/>
+              <h2>Back End:</h2>
+              <h3>MongoDB, ExpressJS, AngularJS, NodeJS,<br/>SQL, NoSQL, APIs, PostgreSQL, OAuth,<br/>Ruby, Rails, BackboneJS, AJAX,<br/></h3>
 
-  <div id="credits" class="well hidden">
-    <h3>HTML, CSS, JavaScript, jQuery, Bootstrap, Ruby, Rails, APIs, MongoDB, ExpressJS, AngularJS, NodeJS, SQL, NoSQL, Git, Github, PostgreSQL, BackboneJS, ReactJS, AJAX, OAuth</h3>
-     <!-- <ul>
-       <li>HTML</li>
-       <li>CSS</li>
-       <li>Javascript</li>
-       <li>jQuery</li>
-       <li>Bootstrap</li>
-       <li>Ruby</li>
-       <li>Rails</li>
-       <li>APIs</li>
-       <li>MongoDB</li>
-       <li>ExpressJS</li>
-       <li>AngularJS</li>
-       <li>NodeJS</li>
-       <li>SQL</li>
-       <li>NoSQL</li>
-       <li>Git</li>
-       <li>Github</li>
-       <li>BackboneJS</li>
-       <li>ReactJS</li>
-       <li>AJAX</li>
-       <li>OAuth</li>
-     </ul> -->
-   <div class="embed-responsive embed-responsive-16by9">
-   </div>
- </div>
+             <div class="embed-responsive embed-responsive-16by9">
+             </div>
+           </div>
 
+      <!-- <a href="#creditsone" class="toggle btn btn-success btn-lg">About Me</a>
+          <div id="creditsone" class="well hidden one">
+            <h3>I graduated from General Assembly Austin Web Development Immersive.</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+            </div>
+          </div> -->
 
- <a href="#creditsone" class="toggle btn btn-success btn-lg">About Me</a>
-<!-- <div id="second">
-  <a href="#creditsone" class="toggle btn btn-primary"> About Me </a>
-</div> -->
-<div id="creditsone" class="well hidden one">
-    <h3>I graduated from General Assembly Austin Web Development Immersive.</h3>
-  <div class="embed-responsive embed-responsive-16by9">
-  </div>
-</div>
-
-<a href="#creditstwo" class="toggle btn btn-danger btn-lg">Active Sessions</a>
-<!-- <div id="third">
-  <a href="#creditstwo" class="toggle btn btn-primary">Active Sessions</a>
-</div> -->
-
-<div id="creditstwo" class="well hidden two">
-     <h3>No current active sessions.</h3>
-  <div class="embed-responsive embed-responsive-16by9">
-  </div>
-</div>
+      <a href="#creditstwo" class="toggle btn btn-danger btn-lg"> Sessions </a>
+          <div id="creditstwo" class="well hidden two">
+            <h3>No current active sessions.</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+            </div>
+          </div>
 </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

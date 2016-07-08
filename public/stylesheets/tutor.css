@@ -19,7 +19,7 @@ h4{
 
 h3 {
   text-align: center;
-  width: 200px;
+  /*width: 200px;*/
 }
 
 .panel {
@@ -68,7 +68,8 @@ input[type="submit"] {
 }
 
 .infoButtons {
-  text-align: center;
+  /*text-align: left;*/
+  margin-left: -30px;
 }
 
 #first a:link, a:visited {
@@ -85,7 +86,7 @@ input[type="submit"] {
 }
 
 #credits {
-  /*text-align: center;*/
+  text-align: center;
   /*list-style: none;*/
 }
 
@@ -130,18 +131,36 @@ input[type="submit"] {
     visibility: hidden;
   }
 }
-@media screen and (max-width: 500px) {
-  .toppart h1 { font-size: 50px;
-       padding-top:40px;
-       padding-left:20px;
-   }
-   .toppart h4 { font-size: 30px;
+@media screen and (max-width: 991px) {
+    h4 { font-size: 30px;
         padding-top:10px;
         padding-left:20px;
    }
+   .leftpartone {
+     width: 90%;
+   }
    .leftpart img{
-    width:30%;
+    width:90%;
     margin:90px 0 0 50px;
+   }
+
+   .center {
+     text-align: right;
+   }
+   .infoButtons .btn{
+     font-size: 20px;
+     margin: 0 auto;
+     padding: 30px 200px;
+     display: inline-block;
+     /*vertical-align: middle;*/
+   }
+   #first {
+     font-size: 20px;
+     padding-left: -100px;
+   }
+   #creditsone {
+     font-size: 20px;
+     padding-left: -50px;
    }
    #third a:link, a:visited{
     margin:90px 0 40px 120px;
