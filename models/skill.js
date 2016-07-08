@@ -1,5 +1,13 @@
 var mongoose = require('mongoose');
 
+/////////////////////////////////////////////////////////////////////////////////
+// This is a model that we originally had intended to include in our initial ////
+// ERDs. Due to time constraints of the project (4 days to compmplete), we   ////
+// decided not to include this in development. We would eventually like to add //
+// this to indclude the option of adding skills as a feature to both student   //
+// and instructor profiles. We envision this as a search feature.              //
+/////////////////////////////////////////////////////////////////////////////////
+
 var skillSchema = new mongoose.Schema({
   cli: { type: String, required: false },
   git: { type: String, required: false },
@@ -26,10 +34,8 @@ var skillSchema = new mongoose.Schema({
   c_sharp: { type: String, required: false },
   c_plus: { type: String, required: false },
   c_plus_plus: { type: String, required: false }
-
 });
 
-// Need to find what goes in the single quotes below
 var Skill = mongoose.model('########', skillSchema);
 
 module.exports = Skill;

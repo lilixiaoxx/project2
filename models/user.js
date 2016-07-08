@@ -1,18 +1,24 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
+////////////////////////////////////////////////////////////////////////////
+// This model stores all user data for those who sign up. Upon sign up,   //
+// users are automatically distinguished as as tutor or student via the   //
+// 'tutor' property and what they select during sign up. This imporves    //
+// searchabilty, profile customization. A password salting encryption has //
+// also been implemented.                                                 //
+////////////////////////////////////////////////////////////////////////////
+
 var SALT_WORK_FACTOR = 10;
 
 var userSchema = new mongoose.Schema({
   first_name: { type: String, required: true },
   last_name: { type: String, required: true },
-  phone: { type: Number, required: true }, //having issues with INT
+  phone: { type: Number, required: true },
   email: { type: String, required: true, index: { unique: true }},
   password: { type: String, required: true },
-  // gender: { type: String, required: true },
-  age: { type: Number, required: true }, // same thing here for Int.
-  // skills: { type: String, required: false },
-  tutor: { type: Boolean, defaultsTo: false, required: false } //this will be a checkbox function so need to find out how that will work with it being a string
+  age: { type: Number, required: true },
+  tutor: { type: Boolean, defaultsTo: false, required: false }
 });
 
 userSchema.pre('save', function(next) {

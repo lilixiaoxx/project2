@@ -5,10 +5,17 @@ var Recommendation = require('../models/recommendation');
 var authWall = require('../lib/auth_wall');
 
 
+///////////////////////////
+// GET home landing page //
+///////////////////////////
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
+
+////////////////////////////////////////////
+// CREATE new user on sign-up pop-up form //
+////////////////////////////////////////////
 
 router.post('/newUser', function(req, res, next) {
   var user = new User({
