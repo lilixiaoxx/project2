@@ -5,17 +5,9 @@ body {
   background-size:100%;
 }
 
-a {
+/*a {
   color: #00B7FF;
-}
-
-h1{
-  font-size:60px;
-  text-align: center;
-  padding-top: 0px;
-  color: black;
-  font-family: 'Fjalla One', sans-serif;
-}
+}*/
 
 h4{
   font-size:30px;
@@ -23,6 +15,11 @@ h4{
   padding-top: 40px;
   color: black;
   font-family: 'Fjalla One', sans-serif;
+}
+
+h3 {
+  text-align: center;
+  /*width: 200px;*/
 }
 
 .panel {
@@ -34,39 +31,46 @@ h4{
   margin-right: auto;
 }
 
-label, input {
-  display:block;
+form {
+  margin-top: 30px;
+  /*font-weight: bolder;*/
+  font-size: 40px;
+  /*border: none;*/
 }
 
-input.text {
-  margin-bottom:12px;
-  width:95%;
-  padding: .4em;
+p {
+  color: red;
+  font-size: 20px;
+  font-weight: 800;
 }
 
-.tests {
-  margin: 50px;
-}
+/*input {
+  border-radius: 5px;
+  background-color: #2b54f3;
+  border: none;
+}*/
 
-.leftpart{
-  margin-top:50px;
-  margin-left:100px;
+input[type="submit"] {
+    font-family: FontAwesome;
+    border: none;
+    background-color: inherit;
+    color: #2b54f3;
 }
 
 .leftpartone{
   width:40%;
+  display: block;
 }
 
 .leftpartone img{
-  width:60%;
+  width:80%;
   margin-top:50px;
 }
 
-fieldset {
-  padding:0;
-  border:0;
-  margin-top:25px;
-  }
+.infoButtons {
+  /*text-align: left;*/
+  margin-left: -30px;
+}
 
 #first a:link, a:visited {
     background-color: #FF8C00;
@@ -79,6 +83,11 @@ fieldset {
 
 #first a:hover, a:active {
     background-color: hotpink;
+}
+
+#credits {
+  text-align: center;
+  /*list-style: none;*/
 }
 
 #second a:link, a:visited {
@@ -107,21 +116,23 @@ fieldset {
     background-color: gray;
 }
 
-.ui-dialog .ui-state-error {
-  padding: .3em;
-  }
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
 
-.validateTips {
-  border: 1px solid transparent;
-  padding: 0.3em;
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
   }
-
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
 @media screen and (max-width: 991px) {
-  .toppart h1 { font-size: 50px;
-       padding-top:40px;
-       padding-left:20px;
-   }
-   .toppart h4 { font-size: 30px;
+    h4 { font-size: 30px;
         padding-top:10px;
         padding-left:20px;
    }
@@ -132,12 +143,24 @@ fieldset {
     width:90%;
     margin:90px 0 0 50px;
    }
+
+   .center {
+     text-align: right;
+   }
    .infoButtons .btn{
      font-size: 20px;
      margin: 0 auto;
      padding: 30px 200px;
      display: inline-block;
      /*vertical-align: middle;*/
+   }
+   #first {
+     font-size: 20px;
+     padding-left: -100px;
+   }
+   #creditsone {
+     font-size: 20px;
+     padding-left: -50px;
    }
    #third a:link, a:visited{
     margin:90px 0 40px 120px;
@@ -146,5 +169,4 @@ fieldset {
    #first a:link, a:visited{
     margin:90px 0 40px 120px;
     padding: 20px 60px;
-
  }
