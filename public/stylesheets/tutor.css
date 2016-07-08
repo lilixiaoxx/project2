@@ -1,0 +1,118 @@
+body {
+  padding-top: 60px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-repeat:no-repeat;
+  background-size:100%;
+}
+
+/*a {
+  color: #00B7FF;
+}*/
+
+h4{
+  font-size:30px;
+  text-align: center;
+  padding-top: 40px;
+  color: black;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+p {
+  color: red;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/*input {
+  border-radius: 5px;
+  background-color: #2b54f3;
+  border: none;
+}*/
+input[type="submit"] {
+    font-family: FontAwesome;
+}
+
+.leftpartone{
+  width:40%;
+}
+
+.leftpartone img{
+  width:60%;
+  margin-top:50px;
+}
+
+#first a:link, a:visited {
+    background-color: #FF8C00;
+    color: white;
+    padding: 30px 100px;
+    margin:0 0 40px 900px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#first a:hover, a:active {
+    background-color: hotpink;
+}
+
+#second a:link, a:visited {
+    background-color: #FF4500;
+    color: white;
+    padding: 30px 100px;
+    margin:0 0 60px 900px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#second a:hover, a:active {
+    background-color: #FF6347;
+}
+
+#third a:link, a:visited {
+    background-color: green;
+    color: white;
+    padding: 30px 90px;
+    margin:0 0 0 900px;
+    text-decoration: none;
+    display: inline;
+}
+
+#third a:hover, a:active {
+    background-color: gray;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 500px) {
+  .toppart h1 { font-size: 50px;
+       padding-top:40px;
+       padding-left:20px;
+   }
+   .toppart h4 { font-size: 30px;
+        padding-top:10px;
+        padding-left:20px;
+   }
+   .leftpart img{
+    width:30%;
+    margin:90px 0 0 50px;
+   }
+   #third a:link, a:visited{
+    margin:90px 0 40px 120px;
+    padding: 20px 50px;
+   }
+   #first a:link, a:visited{
+    margin:90px 0 40px 120px;
+    padding: 20px 60px;
+ }
