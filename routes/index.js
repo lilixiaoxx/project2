@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/newUser', function(req, res, next) {
   var user = new User({
      first_name: req.body.first_name,
      last_name: req.body.last_name,

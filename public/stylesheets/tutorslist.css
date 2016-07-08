@@ -1,5 +1,4 @@
 body {
-  /*padding-top: 60px;*/
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -8,47 +7,33 @@ a {
 }
 
 h4{
-  /*margin: 100px;*/
   margin-top: 100px;
   font-size:30px;
   text-align: center;
-  /*padding-top: 40px;*/
   color: black;
   font-family: 'Fjalla One', sans-serif;
 }
 
 .btn{
   height:90px;
-  width:240px;
-  margin-left:120px;
-  /*margin-top: 90px;*/
+  width: 270px;
+  margin-left:100px;
   margin-top: 40px;
 }
 
-/*div#tutors {
-  margin-top: 150px;
-}*/
-
-/*#second a:link, a:visited {
-    background-color: blue;
-    color: white;
-    padding: 30px 60px;
-    margin:90px 0 0 200px;
-    float:left;
-    text-decoration: none;
+#second a:link, a:visited {
+    background-color: #d28b05;
+    /*color: white;*/
+    /*padding: 30px 60px;*/
+    /*margin:90px 0 0 200px;*/
+    /*float:left;*/
+    /*text-decoration: none;*/
 }
-
-#third a:link, a:visited {
-    background-color: green;
-    color: white;
-    padding: 30px 45px;
-    margin:90px 0 0 200px;
-    float:left;
-    text-decoration: none;
-  }*/
 
 @media screen and (max-width: 409px) {
    h4 { font-size: 30px;
         padding-top:10px;
+   }
+   .btn { margin-left: 60px;
    }
  }
