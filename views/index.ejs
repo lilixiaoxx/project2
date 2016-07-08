@@ -75,7 +75,13 @@
 						<li><a href="#contactinfo">Contact Information</a></li>
 					</ul>
           <ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span id="signupPop">Signup</span></a></li>
+						<li>
+							<% if (user) { %>
+							<a href="/profiles">Profile</a>
+							<% } else { %>
+							<a href="#"><span id="signupPop">Signup</span></a>
+							<% } %>
+						</li>
 						<li>
 						<% if (user) { %>
 							<a href="/sessions/logout">Log Out</a>
