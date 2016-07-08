@@ -27,8 +27,12 @@
     <h2>Recommendations</h2>
   <div id="recommend">
     <form method="post" action="/profiles/<%= tutor._id %>/likeTutor">
+      <input type="hidden" name="like" value="like" />
       <input type="submit" class="search" value="&#xf087;" />
       <span class="likes"><%= numLikes %></span>
+    </form>
+    <form method="post" action="/profiles/<%= tutor._id %>/likeTutor">
+      <input type="hidden" name="like" value="dislike" />
       <input type="submit" class="search" value="&#xf088;" />
       <span class="dislikes"><%= numDislikes %></span>
     </form>

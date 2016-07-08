@@ -17,7 +17,7 @@ router.get('/', authWall, function(req, res, next) {
 // GET list of ONLY tutor users for searchability //
 ////////////////////////////////////////////////////
 
-router.get('/tutorslist', function(req, res, next) {
+router.get('/tutorslist', authWall, function(req, res, next) {
   User.find({tutor:true}, function(err, users){
     if (err) console.log(err);
     res.render('tutorslist', {users: users});
@@ -28,7 +28,7 @@ router.get('/tutorslist', function(req, res, next) {
 // GET TUTOR profile pages //
 /////////////////////////////
 
-router.get('/:id', function(req, res, next) {
+router.get('/:id', authWall, function(req, res, next) {
   var id = req.params.id;
   User.findOne({_id:id}, function(err, tutor){
     if(err)console.log(err);
@@ -51,8 +51,9 @@ router.post('/:id/likeTutor', function(req, res, next){
 
  // Determine if 'like' or 'dislike' //
   var likeOrDislike = req.body.like;
-  var booleanLike = (likeOrDislike === 'Like');
-
+  console.log(likeOrDislike);
+  var booleanLike = (likeOrDislike === 'like');
+  console.log(booleanLike);
 
   var recommended = new Recommendation ({
     tutor_id: req.params.id,
@@ -70,7 +71,3 @@ router.post('/:id/likeTutor', function(req, res, next){
 });
 
 module.exports = router;
-
-
-
-
