@@ -1,6 +1,6 @@
 About the Project:
 
-Developers: Cece Chen (Github: lilixiaoxx), Christopher Osbourne (Github: caosbourne), Alfredo Amengual (Github: aamengual14)
+Developers: Cece Chen (Github: lilixiaoxx), Christopher Osborne (Github: caosborne), Alfredo Amengual (Github: aamengual14)
 
 With CodeConnect.us is a web application with aimed goal of connecting developers/programers
 with students interested in learning how to code, no matter the age or skill level. Upon sign-up,
